@@ -25,3 +25,9 @@ def FindWordCount(listOfLines, string):
                 counter += 1
     return counter
 
+def ScoreFinder(nameList, scoreList, name):
+    for i in nameList:
+        if i.lower() == name.lower():
+            PrintOutput(name + " got a score of " + str(scoreList[nameList.index(i)]))
+            return
+    PrintOutput("player not found")
