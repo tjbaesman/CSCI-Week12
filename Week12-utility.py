@@ -17,3 +17,11 @@ def LoadFile(filename):
 def UpdateString(string, substring, IDX):
     PrintOutput(string[0:IDX] + substring + string[IDX+len(substring):len(string)])
 
+def FindWordCount(listOfLines, string):
+    counter = 0
+    for i in listOfLines:
+        for j in range(len(i)-len(string)):
+            if i[j:j+len(string)].lower() == string.lower():
+                counter += 1
+    return counter
+
