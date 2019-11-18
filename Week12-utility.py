@@ -14,4 +14,6 @@ def LoadFile(filename):
         lines[i] = lines[i][0:len(lines[i])-1]
     return lines
 
+def UpdateString(string, substring, IDX):
+    PrintOutput(string[0:IDX] + substring + string[IDX+len(substring):len(string)])
 
